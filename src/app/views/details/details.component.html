@@ -1,0 +1,21 @@
+<div class="outer">
+  <h2>create user</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="save()">
+    <mat-form-field >
+      <mat-label>name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field >
+      <mat-label>age</mat-label>
+      <input matInput formControlName="age">
+    </mat-form-field>
+
+    <br/><br/>
+
+    <button mat-flat-button color="primary" type="submit" [disabled]="!userForm.dirty || !userForm.valid">save</button>
+    &nbsp;&nbsp;&nbsp;
+    <button mat-flat-button color="warn" [disabled]="!userForm.dirty || !userForm.valid">delete</button>
+  </form>
+</div>
