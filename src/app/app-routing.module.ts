@@ -5,7 +5,10 @@ import {DetailsComponent} from './views/details/details.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'details', component: DetailsComponent },
+  { path: '',   redirectTo: '/overview', pathMatch: 'full' },
+  // { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
