@@ -1,0 +1,12 @@
+
+
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-button routerLink="/overview" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">users</button>
+    <button mat-button routerLink="/details" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">create new</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
