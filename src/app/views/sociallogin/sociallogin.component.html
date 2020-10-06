@@ -1,0 +1,28 @@
+<div class="outer">
+
+  <h2>Social Login with Google or Facebook</h2>
+
+  <div *ngIf="loggedIn===false">
+    <button mat-flat-button color="primary" type="button" (click)="signInWithFB()" class="btn btn-primary">
+      <mat-icon>facebook</mat-icon> &nbsp;&nbsp;Sign In With Facebook
+    </button>&nbsp;&nbsp;&nbsp;
+    <button mat-flat-button color="accent" type="button" (click)="signInWithGoogle()" class="btn btn-primary">
+      <mat-icon fontSet="fab" fontIcon="fa-google"></mat-icon> &nbsp;&nbsp;Sign In With Google
+    </button>
+  </div>
+
+  <div *ngIf="loggedIn===true">
+
+
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip>{{user.firstName}} {{user.lastName}}</mat-chip>
+      <mat-chip color="accent" selected>{{user.email}}</mat-chip>
+    </mat-chip-list>
+
+
+    <br/>
+    <br/>
+
+    <button mat-flat-button color="primary" type="button" (click)="signOut()" class="btn btn-primary">Sign Out</button>
+  </div>
+</div>
